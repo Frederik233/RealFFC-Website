@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="FFC1.png">
+    <title>Learn More - FFC Media</title>
+    <style>
+        body {
+            background-image: url('Backgroundcolor.png');
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        .headline {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            background: linear-gradient(to right, #00ddff, #0042f9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .services-container {
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            opacity: 0;
+            animation: fade-in 1s ease-in-out forwards;
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .title {
+            color: #333;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .services {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .back-button {
+            display: block;
+            margin: 20px auto;
+            background-color: #0042f9;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 18px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            text-align: center;
+            width: 100px;
+        }
+
+        .back-button:hover {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="headline">
+            What services do we provide?
+        </h1>
+
+        <div class="services-container">
+            <h3 class="title">Paid Advertising Campaigns</h3>
+            <p class="services">
+                Setting up and managing targeted ad campaigns on platforms like Facebook, Instagram, Google Ads, or Amazon Advertising to reach potential customers and drive sales.
+            </p>
+        </div>
+
+        <div class="services-container">
+            <h3 class="title">Google Analytics</h3>
+            <p class="services">
+                Unlock powerful business insights with Google Analytics. Track website traffic, analyze user behavior, and optimize your marketing strategies. Gain comprehensive data analysis, track conversions, and customize reports. Let us guide you in leveraging this powerful analytics tool for business growth.
+            </p>
+        </div>
+
+        <div class="services-container">
+            <h3 class="title">Customer Support</h3>
+            <p class="services">
+                Offer customer support services to address inquiries, handle complaints, and ensure positive customer experiences. Monitor online reviews and manage your client's online reputation by responding to feedback and maintaining a favorable brand image.
+            </p>
+        </div>
+
+        <div class="services-container">
+            <h3 class="title">Video Editing</h3>
+            <p class="services">
+                Elevate your videos to new heights with our professional video editing services. Our expert editors will transform your raw footage into stunning visual masterpieces. From cutting and sequencing to color grading and special effects, we bring your vision to life.
+            </p>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="index.html" class="back-button">
+                Back
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

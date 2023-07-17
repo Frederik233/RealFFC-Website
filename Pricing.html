@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="FFC1.png">
+    <title>Learn More - FFC Media</title>
+    <style>
+        body {
+            background-image: url('Backgroundcolor.png');
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        .headline {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            background: linear-gradient(to right, #00ddff, #0042f9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .services-container {
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            opacity: 0;
+            animation: fade 1s forwards;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .title {
+            color: #333;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .services {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .back-button {
+            display: block;
+            margin: 20px auto;
+            background-color: #0042f9;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 18px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            text-align: center;
+            width: 100px;
+        }
+
+        .back-button:hover {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="headline">
+            Pricing
+        </h1>
+
+        <div class="services-container">
+            <h3 class="title">Packages details</h3>
+            <p class="services">
+                Our standard package starts at just 4,500 DKK, providing you with a comprehensive set of services tailored to boost your online presence and drive tangible results. This package includes:<br><br>
+                Social Media Account Setup: We will set up or optimize your social media profiles on platforms such as Facebook, Instagram, Twitter, LinkedIn, or others based on your business requirements.<br><br>
+                Video Editing: We'll take your raw footage or existing videos and transform them into captivating, professional-quality content. Our skilled video editors will add effects, transitions, music, and optimize the videos for different social media platforms.<br><br>
+                Social Media Management: We will handle the day-to-day management of your social media accounts, community engagement, responding to comments and messages, and monitoring your online reputation.<br><br>
+                Analytics and Reporting: We provide detailed analytics and reports that track the performance of your website and social media. These insights will help you understand the impact of our efforts and make informed decisions for future strategies.<br><br>
+                Google Ads: We'll create and manage strategic Google Ads campaigns to drive targeted traffic to your website or landing pages. Our team will conduct keyword research, develop ad copy, monitor performance, and optimize the campaigns to maximize your return on investment (ROI).<br><br>
+            </p>
+        </div>
+
+        <div class="services-container">
+            <h3 class="title">Customized solutions</h3>
+            <p class="services">
+                We understand that each business has unique requirements. If our standard package doesn't fully meet your needs, we also offer customized solutions. Our team will work closely with you to create a tailored strategy that aligns with your specific goals and budget.
+            </p>
+        </div>
+
+        <div class="services-container">
+            <h3 class="title">Get in Touch:</h3>
+            <p class="services">
+                Ready to take your social media presence to the next level? Contact us today to discuss your requirements and get a personalized quote. We're excited to collaborate with you and help your business thrive in the digital landscape.
+            </p>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="index.html" class="back-button">
+                Back
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Function to check if an element is in the viewport
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Function to handle the fading effect
+        function handleFadeEffect() {
+            var elements = document.getElementsByClassName("services-container");
+            for (var i = 0; i < elements.length; i++) {
+                if (isElementInViewport(elements[i])) {
+                    elements[i].classList.add("fade-in");
+                } else {
+                    elements[i].classList.remove("fade-in");
+                }
+            }
+        }
+
+        // Event listener to trigger the fading effect on scroll
+        window.addEventListener("scroll", handleFadeEffect);
+        window.addEventListener("resize", handleFadeEffect);
+
+        // Initial check on page load
+        handleFadeEffect();
+    </script>
+</body>
+
+</html>
