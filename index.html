@@ -11,6 +11,7 @@
         body {
             background-image: url(https://static.vecteezy.com/system/resources/previews/006/139/107/original/beautiful-blue-color-gradient-background-free-vector.jpg);
             font-family: Arial, sans-serif;
+            
         }
 
         .Header {
@@ -115,6 +116,96 @@
             padding-right: 25%;
             line-height: 1.4;
         }
+
+        /* Additional CSS */
+        @media (max-width: 600px) {
+          /* Hide image container on screens narrower than 600px */
+          .image-container {
+            display: none;
+          }
+
+          .desktop-menu {
+            display: none;
+          }
+
+          .menu-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+            backdrop-filter: blur(5px); /* Apply blur effect */
+          }
+
+          .menu.open .menu-container {
+            pointer-events: initial;
+            opacity: 1;
+          }
+
+          .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            
+          }
+
+          .menu a {
+            margin-bottom: 10px;
+            color: white;
+            text-decoration: none;
+            font-family: system-ui;
+            font-size: 20px;
+          }
+
+          .menu a:hover {
+            opacity: 0.5;
+          }
+        }
+
+        @media (min-width: 601px) {
+          .mobile-menu {
+            display: none;
+          }
+
+          .desktop-menu {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+
+          /* Add larger gap between headline and brand */
+          .Headline {
+            margin-top: 40px;
+          }
+
+          /* Adjust padding-right for wider view */
+          .info-content {
+            padding-right: 100px;
+          }
+        }
+
+        /* Mobile Menu Styles */
+        .menu-icon {
+          cursor: pointer;
+          font-size: 30px;
+          display: inline-block;
+        }
+        
+        .menu-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
     </style>
 
     
@@ -123,11 +214,23 @@
 <body>
     <div class="Header">
         <h1 class="Brand">FFC Media.</h1>
-        <div class="Button-container">
+        <nav>
+          <div class="mobile-menu">
+            <div class="menu-icon">&#9776;</div>
+            <div class="menu">
+              <div class="menu-container">
+                <a href="Pricing.html" class="Pricing">Pricing and packages</a>
+                <a href="About.html" class="About">About Us</a>
+                <a href="GetStarted.html" class="Get_started">Sign up</a>
+              </div>
+            </div>
+          </div>
+          <div class="desktop-menu">
             <a href="Pricing.html" class="Pricing">Pricing and packages</a>
             <a href="About.html" class="About">About Us</a>
             <a href="GetStarted.html" class="Get_started">Sign up</a>
-        </div>
+          </div>
+        </nav>
     </div>
 
     <div class="info">
@@ -146,11 +249,31 @@
                 Learn More
             </a>
         </div>
-        <div>
+        <div class="image-container">
             <img src="AgencyWeb-removebg.png" width="857" height="563">
         </div>
     </div>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const menuIcon = document.querySelector(".menu-icon");
+        const menu = document.querySelector(".menu");
+        const header = document.querySelector(".Header");
 
+        menuIcon.addEventListener("click", function() {
+          header.classList.toggle("blur");
+          menu.classList.toggle("open");
+        });
+
+        // Close the menu when clicking outside of it
+        document.addEventListener("click", function(event) {
+          const target = event.target;
+          if (!target.closest(".menu") && !target.closest(".menu-icon")) {
+            header.classList.remove("blur");
+            menu.classList.remove("open");
+          }
+        });
+      });
+    </script>
 </body>
 </html>
