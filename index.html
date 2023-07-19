@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +12,49 @@
             background-image: url(https://static.vecteezy.com/system/resources/previews/006/139/107/original/beautiful-blue-color-gradient-background-free-vector.jpg);
             font-family: Arial, sans-serif;
             overflow-x: hidden;
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+
+        .fade-in {
+            opacity: 1;
+        }
+
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        .Headline {
+            color: white;
+            font-family: system-ui; 
+            font-size: 65px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            padding-top: 20px;
+        }
+        
+        .gradient {
+            background-image: linear-gradient(to right, #00ddff, #0042f9);
+            background-clip: text;
+            -webkit-background-clip: text; /* Chrome, Safari 3 */
+            -webkit-text-fill-color: transparent;
+          }
+        
+        .animated-gradient {
+            background-image: linear-gradient(to right, #00ddff, #0042f9);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradient-animation 3s linear infinite; /* Increased duration to 5 seconds */
         }
 
         .Header {
@@ -23,7 +64,7 @@
             justify-content: center;
             padding: 30px 30px;
             color: white;
-            font-family: system-ui;
+            font-family: Arial, sans-serif;
             font-size: 20px;
         }
 
@@ -37,7 +78,6 @@
             flex-direction: column;
             align-items: center;
             font-size: 20px;
-           
         }
 
         .Nav-link {
@@ -45,14 +85,12 @@
             text-decoration: none;
             transition: opacity 0.3s;
             padding-right: 3px;
-        
         }
 
         .Nav-link:hover {
             opacity: 0.5;
         }
 
-        
         .Signup {
             background-image: linear-gradient(to right, #00ddff, #0042f9);
             background-color: transparent;
@@ -64,7 +102,6 @@
             padding: 15px 30px;
             text-decoration: none;
             transition: background-color 0.3s, opacity 0.3s;
-            
         }
 
         .LearnMore {
@@ -79,17 +116,19 @@
             text-decoration: none;
             transition: background-color 0.3s, opacity 0.3s;
             
-            
         }
 
-        .LearnMore:hover,
+        .LearnMore:hover {
+            opacity: 0.5;
+        }
+
         .Signup:hover {
             opacity: 0.5;
         }
 
         .info {
             display: flex;
-            align-items: center;
+            
             justify-content: space-between;
             height: 65vh;
             padding: 0 30px;
@@ -99,6 +138,11 @@
         .info-content {
             flex: 1;
             padding-right: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
 
         .Headline {
@@ -107,75 +151,112 @@
             font-size: 65px;
             margin-bottom: 20px;
             line-height: 1.2;
-            padding-top: 250px;
+            padding-top: 20px;
         }
 
         .gradient {
             background-image: linear-gradient(to right, #00ddff, #0042f9);
-            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-background-clip: text; /* Chrome, Safari 3 */
             -webkit-text-fill-color: transparent;
-        }
+          }
 
         .Explanation {
             color: white;
-            font-family: system-ui; 
+            font-family: Arial, sans-serif; 
             font-size: 25px;
             margin-bottom: 30px;
             padding-right: 25%;
             line-height: 1.4;
             width: 100%;
+            text-align: center; /* Add this line to center the text */
         }
 
         @media (max-width: 600px) {
-          .Brand {
-            margin-top: 20px;
-            margin-bottom: 10px;
-          }
+            .Brand {
+                margin-top: 20px;
+                margin-bottom: 10px;
+                font-size: 35px;
+            }
 
-          .Nav-links {
-            flex-direction: row;
-            justify-content: center;
-            gap: 20px;
-            font-size: 14px;
-        
-            
-            
-          }
+            .Nav-links {
+                flex-direction: row;
+                justify-content: center;
+                gap: 20px;
+                font-size: 14px;
+                width: 100%;
+            }
 
-          .Signup {
-        
-            padding: 10px 25px;
-            
-        }
-          .Signup {
-            font-size: 16px;
-          }
+            .Headline {
+                text-align: center;
+                font-size: 50px;
+            }
 
-          .image-container {
-            display: none;
-          }
+            .Signup {
+                padding: 10px 25px;
+            }
+
+            .LearnMoreContainer {
+                text-align: center;
+            }
+
+            .LearnMore {
+                font-size: 20px;
+            }
+
+            .Explanation {
+                font-size: 20px;
+                text-align: center;
+                padding-left: 120px;
+            }
+
+            .Signup {
+                font-size: 16px;
+            }
+
+            .image-container {
+                display: none;
+            }
         }
 
         @media (min-width: 601px) {
-          .Header {
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-          }
+            .Header {
+                flex-direction: row;
+                align-items: left;
+                justify-content: space-between;
+            }
 
-          .Brand {
-            margin-top: 0;
-            margin-bottom: 0;
-          }
+            .Explanation {
+                text-align: left;
+                padding-right: 10px;
+            }
 
-          .Nav-links {
-            flex-direction: row;
-            gap: 30px;
-          }
+            .Brand {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            .Nav-links {
+                flex-direction: row;
+                gap: 30px;
+            }
+
+            .Headline {
+                padding-top: 250px;
+            }
+
+            .image-container {
+                padding-top: 120px;
+                padding-left: 30px;
+            }
         }
     </style>
 
-    
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+            document.body.classList.add("fade-in");
+        });
+    </script>
 </head>
 
 <body>
@@ -191,19 +272,22 @@
     <div class="info">
         <div class="info-content">
             <h2 class="Headline">
-                Social <span class="gradient">Media</span><br>
+                Social <span class="gradient animated-gradient">Media</span><br>
                 Services
             </h2>
             <p class="Explanation">
-                Our social media marketing company <br>
-                can provide a range of services to <br>
+                Our social media marketing company 
+                can provide a range of services to
                 help businesses effectively promote your
                 brand, engage with their audience, and 
-                achieve their marketing goals.<br>
+                achieve their marketing goals.
             </p>
-            <a href="LearnMore.html" class="LearnMore">
-                Learn More
-            </a>
+
+            <div class="LearnMoreContainer">
+                <a href="LearnMore.html" class="LearnMore">
+                    Learn More
+                </a>
+            </div>
         </div>
         <div class="image-container">
             <img src="AgencyWeb-removebg.png" width="857" height="563">
