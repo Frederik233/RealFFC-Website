@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -5,58 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="FFC1.png">
     <title>Getting Started - FFC Media</title>
-</head>
 
-<style>
-    body {
-        background-image: url(https://static.vecteezy.com/system/resources/previews/006/139/107/original/beautiful-blue-color-gradient-background-free-vector.jpg);
-        font-family: Arial, sans-serif;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+    <style>
+        body {
+            background-image: url(https://static.vecteezy.com/system/resources/previews/006/139/107/original/beautiful-blue-color-gradient-background-free-vector.jpg);
+            font-family: Arial, sans-serif;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
 
-    .container {
-        max-width: 750px;
-        max-height: 750px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #ffffff;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        .container {
+            max-width: 750px;
+            max-height: 750px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .headline {
+            color: #333333;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .gradient {
+            background: linear-gradient(to right, #00ddff, #A899FE);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .back-button {
+            background-color: #0042f9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 50px;
+            font-size: 18px;
+            text-decoration: none; 
+            transition: background-color 0.3s, opacity 0.3s;
+            display: block;
+            width: 300px;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            opacity: 0.5;
+        }
         
-    }
-
-    .headline {
-        color: #333333;
-        font-size: 36px;
-        font-weight: bold;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .gradient {
-        background: linear-gradient(to right, #00ddff, #A899FE);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .back-button {
-        background-color: #0042f9;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        padding: 10px 50px;
-        font-size: 18px;
-        text-decoration: none;
-        transition: background-color 0.3s, opacity 0.3s;
-        margin-bottom: 20px;
-        display: block;
-        width: 300px;
-        text-align: center;
-        margin: 0 auto;
-    }
-</style>
-
+        /* New CSS for the white background */
+        .back-button-container {
+            text-align: center;
+            
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            margin-bottom: 60px;
+        }
+    </style>
+</head>
 <body>
     <div class="container">
         <h1 class="headline">
@@ -65,10 +78,10 @@
 
         <!-- Add your form or other content here -->
 
-        <div style="text-align: center;">
-            <a href="index.html" class="back-button">Back</a>
-        </div>
     </div>
+
+    <!-- Back button container with white background -->
+   
 
     <script src="https://cdn02.jotfor.ms/static/prototype.forms.js?3.3.43429" type="text/javascript"></script>
     <script src="https://cdn03.jotfor.ms/static/jotform.forms.js?3.3.43429" type="text/javascript"></script>
@@ -134,30 +147,34 @@
           <li style="display:none">Should be Empty: <input type="text" name="website" value="" /></li>
         </ul>
       </div>
-      <script>
+    </form>
+    <script>
         JotForm.showJotFormPowered = "new_footer";
-      </script>
-      <script>
+    </script>
+    <script>
         JotForm.poweredByText = "Powered by Jotform";
-      </script><input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="231974172701354" />
-      <script type="text/javascript">
+    </script><input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="231974172701354" />
+    <script type="text/javascript">
         var all_spc = document.querySelectorAll("form[id='231974172701354'] .si" + "mple" + "_spc");
         for (var i = 0; i < all_spc.length; i++)
         {
-          all_spc[i].value = "231974172701354-231974172701354";
+            all_spc[i].value = "231974172701354-231974172701354";
         }
-      </script>
-      <div class="formFooter-heightMask"></div>
-      <div class="formFooter f6 branding21" style="display: flex!important; opacity: 1!important; visibility: visible!important;">
+    </script>
+    <div class="formFooter-heightMask"></div>
+    <div class="formFooter f6 branding21" style="display: flex!important; opacity: 1!important; visibility: visible!important;">
         <div class="formFooter-wrapper formFooter-leftSide">
-          <a href="https://www.jotform.com/?utm_source=formfooter&utm_medium=banner&utm_term=231974172701354&utm_content=jotform_logo&utm_campaign=powered_by_jotform_le" target="_blank" class="formFooter-logoLink"></a>
+            <a href="https://www.jotform.com/?utm_source=formfooter&utm_medium=banner&utm_term=231974172701354&utm_content=jotform_logo&utm_campaign=powered_by_jotform_le" target="_blank" class="formFooter-logoLink"></a>
         </div>
         <div class="formFooter-wrapper formFooter-rightSide"></div>
-      </div>
-    </form>
+    </div>
     <script type="text/javascript">JotForm.ownerView=true;</script>
     <script type="text/javascript">JotForm.forwardToEu=true;</script>
     <script src="https://cdn.jotfor.ms//js/vendor/smoothscroll.min.js?v=3.3.43429"></script>
     <script src="https://cdn.jotfor.ms//js/errorNavigation.js?v=3.3.43429"></script>
+
+    <div class="back-button-container">
+      <a href="index.html" class="back-button">Back</a>
+  </div>
 </body>
 </html>
