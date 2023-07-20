@@ -12,9 +12,8 @@
             background-image: url(https://static.vecteezy.com/system/resources/previews/006/139/107/original/beautiful-blue-color-gradient-background-free-vector.jpg);
             font-family: Arial, sans-serif;
             overflow-x: hidden;
-            overflow-y: hidden;
             opacity: 0;
-            transition: opacity 1s ease-in;
+            transition: opacity 3s ease-in;
         }
 
         .fade-in {
@@ -121,6 +120,7 @@
 
         .LearnMore:hover {
             opacity: 0.5;
+            
         }
 
         .Signup:hover {
@@ -191,6 +191,7 @@
             .Headline {
                 text-align: center;
                 font-size: 50px;
+                padding-left: 50px;
             }
 
             .Signup {
@@ -209,12 +210,14 @@
             }
             .LearnMoreContainer {
                 text-align: center;
+                padding-left: 50px;
+
             }
 
             .Explanation {
                 font-size: 20px;
                 text-align: center;
-                padding-left: 120px;
+                padding-left: 150px;
             }
 
             .Signup {
@@ -225,9 +228,7 @@
                 display: none;
             }
 
-            .body {
-                overflow-y:scroll;
-            }
+            
         }
 
         @media (min-width: 601px) {
@@ -264,6 +265,9 @@
                 padding-bottom: 200px;
                 
             }
+            .body {
+                overflow-y: hidden;
+            }
         }
     </style>
 
@@ -278,6 +282,7 @@
     <div class="Header">
         <h1 class="Brand">FFC Media.</h1>
         <div class="Nav-links">
+            <a href="Pricing.html" class="Nav-link">Pricing</a>
             <a href="About.html" class="Nav-link">About Us</a>
             <a href="GetStarted.html" class="Signup">Sign up</a>
         </div>
