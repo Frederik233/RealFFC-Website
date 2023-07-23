@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-STBJ4YRRRR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-STBJ4YRRRR');
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Favicon.png">
+    <title>Guide - FFC Media</title>
+    <style>
+        body {
+            background-image: url('GuideBackground.png');
+            background-size: 150% 1000%;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            overflow-x: hidden;
+        }
+
+        .headline {
+            font-weight: bold;
+        }
+
+        .title {
+            font-size: 45px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+        
+        }
+
+        .info {
+            font-size: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .cards {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            position: relative;
+        }
+
+        .card {
+            width: 800px;
+            height: 100%px;
+            border-radius: 20px;
+            background: #f5f5f5;
+            position: relative;
+            padding: 1.8rem;
+            border: 5px solid #c3c6ce;
+            transition: 0.5s ease-out;
+            overflow: visible;
+            
+        }
+
+        .card-details {
+            color: green;
+            height: 100%;
+            gap: .5em;
+            display: grid;
+            place-content: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        
+
+        .text-body {
+            color: rgb(134, 134, 134);
+        }
+
+        .text-title {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .card:hover {
+            border-color: white;
+            transform: scale(1.1);
+            box-shadow:
+           
+            0 0 30px 4px white, /* middle magenta */
+            0 0 30px 90px transparent; /* outer cyan */
+            
+           
+        }
+
+        .card:hover .card-button {
+            transform: translate(-50%, 50%);
+            opacity: 1;
+        }
+        .backbutton {
+            padding: 17px 40px;
+            border-radius: 50px;
+            border: 0;
+            background-color: white;
+            box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-size: 15px;
+            transition: all .5s ease;
+            text-decoration: none;
+            width: 300px;
+           
+           
+           }
+           
+          .backbutton:hover {
+            letter-spacing: 3px;
+            color: black(0, 0%, 100%);
+            box-shadow: white  0px 7px 29px 0px;
+           }
+           
+           .backbutton:active {
+            letter-spacing: 3px;
+            color: hsl(0, 0%, 100%);
+            box-shadow: #cd7773 0px 0px 0px 0px;
+            transform: translateY(10px);
+            transition: 100ms;
+           }
+           .backbuttoncontainer {
+            display: flex;
+            justify-content: center;
+            padding-top: 30px;
+           }
+           .thebutton {
+            text-decoration: none;
+            color: black;
+           }
+    </style>
+</head>
+
+<body>
+
+    <div class="title">
+        Step-by-step
+    </div>
+
+    <div class="cards" onmousemove="updateActiveCard(event)">
+        <div class="card red">
+            <p class="headline">Step 1: Initial Consultation</p>
+            <p class="info">Upon signing up with FFC Media, you'll have an initial consultation with our team. During this meeting, we'll take the time to understand your business, goals, target audience, and marketing objectives. This information will serve as the foundation for creating effective advertising campaigns tailored to your specific needs.</p>
+        </div>
+        <div class="card blue">
+            <p class="headline">Step 2: Strategy and Campaign Creation</p>
+            <p class="info">Once we have a clear understanding of your business, our experienced employees will begin strategizing and creating high-quality advertising campaigns for your business. These campaigns will be designed to connect with potential customers on various social media platforms and drive increased sales for your products or services.</p>
+        </div>
+        <div class="card green">
+            <p class="headline">Step 3: Precise Audience Targeting</p>
+            <p class="info">To ensure the success of your paid advertising campaigns, we'll employ precise audience targeting. Our team will utilize advanced targeting tools and data analysis to reach the right audience, maximizing your return on investment and ensuring that your ad spend is optimized for maximum value.</p>
+        </div>
+        <div class="card yellow">
+            <p class="headline">Step 4: Campaign Implementation and Management</p>
+            <p class="info">After the campaign creation and setup, we'll put the campaigns into action. Our team will actively monitor and manage your advertising campaigns to achieve fast and effective results. We'll make data-driven decisions to optimize performance and adapt strategies as needed for the best outcomes.</p>
+        </div>
+        <div class="card purple"> 
+            <p class="headline">Step 5: Google Analytics Integration</p>
+            <p class="info">We'll set up Google Analytics for your website, allowing you to gain insights into your advertisement campaigns and website performance. You'll receive weekly reports detailing key metrics, website traffic, user behavior, and conversion rates. These reports will help you make informed decisions and adjust your marketing strategies accordingly.</p>
+        </div>
+        <div class="card orange">
+            <p class="headline">Step 6: Social Media Account Management</p>
+            <p class="info">Our Social Media Account Management service will enhance your online presence. By letting us take charge of your social media accounts, you'll save valuable time and resources, allowing you to focus on other aspects of your business. As a result, you'll experience increased brand visibility, higher follower engagement, and enhanced brand loyalty. Through regular monitoring and analytics, we'll identify growth opportunities and optimize your social media performance for maximum impact. </p>
+        </div>
+        <div class="card pink">
+            <p class="headline">Step 7: Ongoing Support and Collaboration</p>
+            <p class="info">We believe in ongoing support and collaboration with our clients. Our team is always available to address any questions or concerns you may have. Your feedback and input are highly valued, and we encourage open communication throughout our partnership. Together, we'll continue to refine and optimize your marketing strategies, ensuring continued success and growth for your business.</p>
+        </div>
+        <div class="card blue">
+            <p class="headline">Step 8: Measurable Results and Long-Term Success</p>
+            <p class="info">With FFC Media's services, you can expect to see measurable results and long-term success. Our data-driven approach, coupled with our expertise in digital marketing, will drive significant improvements in your online visibility, customer engagement, and ultimately, your revenue. We are committed to helping your business thrive in the ever-evolving digital landscape, and we look forward to being your trusted partner in achieving your marketing goals.</p>
+        </div>
+    </div>
+<div class="backbuttoncontainer">
+    <a class="thebutton" href="index.html">
+    <button class="backbutton">
+        Back
+    </button>
+</a>
+</div>
+
+
+    
+</body>
+
+</html>
