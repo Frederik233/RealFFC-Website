@@ -1,159 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-STBJ4YRRRR"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-STBJ4YRRRR');
-    </script>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="Favicon.png">
-    <title>Learn More - FFC Media</title>
+    <title>Two Boxes with Tailwind CSS</title>
     <style>
+
         body {
-            background-image: url('Backgroundcolor.png');
+            background-image: url('GuideBackground.png');
+            background-size: 150% 1000%;
+            background-repeat: no-repeat;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             margin-top: 50px;
-            margin-bottom: 50px;
+        }
+            
+       
+        .Cardcontainer {
+            display: flex;
+            justify-content: center;
         }
 
-        .center {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;
+        .card {
+            width: 190px;
+            height: 254px;
+            border-radius: 20px;
+            background: #f5f5f5;
+            position: relative;
+            padding: 1.8rem;
+            border: 2px solid #c3c6ce;
+            transition: 0.5s ease-out;
+            overflow: visible;
+            padding-right: 50px;
+            margin-right: 20px; /* Add margin to create a gap between the cards */
+        }
+
+        .card-details {
+            color: black;
+            height: 100%;
+            gap: .5em;
+            display: grid;
+            place-content: center;
+        }
+
+        .card-button {
+            transform: translate(-50%, 125%);
+            width: 70%;
+            border: none;
+            background-color: #D65F58;
+            font-size: 1rem;
+            padding: .5rem 1rem;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            opacity: 0;
+            transition: 0.3s ease-out;
+            text-transform: uppercase;
+            border-radius: 50px;
+            border: 0;
+            box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+            letter-spacing: 1.5px;
+            color: #fff;
+        }
+        .card-button:hover {
+            letter-spacing: 3px;
+            background-color: #D65F58;
+            color: hsl(0, 0%, 100%);
+            box-shadow: #D65F58 0px 7px 29px 0px;
+        }
+
+        .text-body {
+            color: rgb(134, 134, 134);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Text */
+        .text-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Hover */
+        .card:hover {
+            border-color: #D65F58;
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px 0 #D65F58;
+        }
+
+        .card:hover .card-button {
+            transform: translate(-50%, 50%);
+            opacity: 1;
         }
 
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px;
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            box-sizing: border-box;
+            position: relative;
+            font-family: sans-serif;
         }
 
-        .headline {
-            font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-align: center;
-            background-image: linear-gradient(to right, #00ddff, #0042f9);
-            background-clip: text;
-            -webkit-background-clip: text; /* Chrome, Safari 3 */
-            -webkit-text-fill-color: transparent;
-              
+        .container::before, .container::after {
+            content: "";
+            background-color: #fab5704c;
+            position: absolute;
         }
 
-        .services-container {
-            border: 1px solid #e0e0e0;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-sizing: border-box;
-            opacity: 0;
-            animation: fade-in 1s ease-in-out forwards;
+        .container::before {
+            border-radius: 50%;
+            width: 6rem;
+            height: 6rem;
+            top: 30%;
+            right: 7%;
         }
 
-        @keyframes fade-in {
-            0% {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .container::after {
+            content: "";
+            position: absolute;
+            height: 3rem;
+            top: 8%;
+            right: 5%;
+            border: 1px solid;
         }
 
-        .title {
-            color: #333;
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
+        .container .box {
+            width: 11.875em;
+            height: 15.875em;
+            padding: 1rem;
+            background-color: #D65F58;
+            border-width: 5px;
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border-radius: .7rem;
+            transition: all ease .3s;
         }
 
-        .services {
-            color: #555;
-            font-size: 18px;
-            line-height: 1.5;
+        .container .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        .back-button {
-            display: block;
-            margin: 20px auto;
-            background-color: #0042f9;
+        .container .box .title {
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: .1em;
             color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            font-size: 18px;
-            text-decoration: none;
-            transition: background-color 0.3s;
-            text-align: center;
-            width: 100px;
         }
 
-        .back-button:hover {
-            opacity: 0.5;
+        .container .box div strong {
+            display: block;
+            margin-bottom: .5rem;
+            color: #fff;
+        }
+
+        .container .box div p {
+            margin: 0;
+            font-size: .9em;
+            font-weight: 300;
+            letter-spacing: .1em;
+            color: #fff;
+        }
+
+        .container .box div span {
+            font-size: .7rem;
+            font-weight: 300;
+            color: #fff;
+        }
+
+        .container .box div span:nth-child(3) {
+            font-weight: 500;
+            margin-right: .2rem;
+        }
+
+        .container .box:hover {
+            box-shadow: 0px 0px 20px 1px white;
+            border: 1px solid white;
+        }
+
+        .backbutton {
+            padding: 17px 40px;
+            border-radius: 50px;
+            border: 0;
+            background-color: white;
+            box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-size: 15px;
+            transition: all .5s ease;
+            text-decoration: none;
+            width: 300px;
+            color: #D65F58;
+            font-weight: bold;
+        }
+
+        .backbutton:hover {
+            letter-spacing: 3px;
+            background-color: #D65F58;
+            color: hsl(0, 0%, 100%);
+            box-shadow: #D65F58 0px 7px 29px 0px;
+        }
+
+        .backbutton:active {
+            letter-spacing: 3px;
+            color: hsl(0, 0%, 100%);
+            box-shadow: #cd7773 0px 0px 0px 0px;
+            transform: translateY(10px);
+            transition: 100ms;
+        }
+
+        .backbuttoncontainer {
+            display: flex;
+            justify-content: center;
+            padding-top: 30px;
+        }
+        .thebutton {
+            text-decoration: none;
+            color: black;
         }
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <h1 class="headline">
-            What services do we provide?
-        </h1>
-
-        <div class="services-container">
-            <h3 class="title">Paid Advertising Campaigns</h3>
-            <p class="services">
-                With FFC Media we will create 5 high-quality campaigns per month on any social media platforms to connect with potential customers and increase sales. Our experienced employees will create and handle your advertising campaigns, ensuring precise audience targeting. Get fast results and maximize your return on investment and optimize your ad spend for maximum value. You will also receive regular reports on campaign performance.
-
-            </p>
-        </div>
-
-        <div class="services-container">
-            <h3 class="title">Google Analytics</h3>
-            <p class="services">
-                We will provide you with weekly reports on your advertisement campaigns and website performance. Our goal is to ensure that you stay informed and updated on the progress of your advertisement campaigns and website's performance. With these weekly reports, you'll have valuable insights into key metrics and data that will help you make informed decisions and optimize your marketing strategies. We will handle every aspect of Google Analytics for your business so you can gain a deeper understanding of your website traffic, user behavior, and conversion rates and make data-driven decisions to optimize your website and marketing strategies to increase your return on investment.
-
-            </p>
-        </div>
-
-        <div class="services-container">
-            <h3 class="title">Customer Support</h3>
-            <p class="services">
-                We will deliver exceptional customer experiences on your social media accounts. Our team will handle customer inquiries and concerns promptly and professionally. Enhance customer engagement and build strong relationships with your customers.
-
-            </p>
-        </div>
-
-        <div class="services-container">
-            <h3 class="title">Video Editing</h3>
-            <p class="services">
-                Our video editing team is here to take the burden off your shoulders and ensure your videos are polished and professional. By creating 5 high-quality videos assuming you will provide us with raw footage.
-
-                
-        </div>
-
-        <div style="text-align: center;">
-            <a href="index.html" class="back-button">
-                Back
+ 
+   
+        <div class="Cardcontainer">
+            <div class="card">
+                <div class="card-details">
+                    <p class="text-title">Google Ads</p>
+                    <p class="text-body">Here are the details of the card</p>
+                </div>
+            <a href="index.html">
+                <button class="card-button">
+                    More info
+                </button>
             </a>
+            
         </div>
-    </div>
-</body>
 
+            <div class="card">
+                <div class="card-details">
+                    <p class="text-title">Google Ads</p>
+                    <p class="text-body">Here are the details of the card</p>
+                </div>
+                <button class="card-button">More info</button>
+            </div>
+        </div>
+    <div class="backbuttoncontainer">
+        <a href="index.html" class="thebutton">
+            <button class="backbutton">
+                Back
+            </button>
+        </a>
+    </div>
+
+   
+</body>
 </html>
