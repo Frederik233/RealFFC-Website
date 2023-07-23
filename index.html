@@ -10,21 +10,177 @@
 
       gtag('config', 'G-STBJ4YRRRR');
     </script>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="Favicon.png">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Lato">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+
     <title>FFC Media</title>
     
     <style>
         body {
-            background-image: url(https://static.vecteezy.com/system/resources/previews/006/139/107/original/beautiful-blue-color-gradient-background-free-vector.jpg);
-            font-family: Arial, sans-serif;
-            overflow-x: hidden;
-             overflow-y: hidden;
+            background-image: url(Backgroundimg.png);
+            font-family: "Lato", Sans-serif;
+            overflow-y: hidden;
+            overflow-y: hidden;
             opacity: 0;
             transition: opacity 3s ease-in;
+            background-size: 100% 130%;
+            background-repeat: no-repeat;
         }
+
+        .Cardcontainer {
+            display: flex;
+            text-align: center;
+            
+        }
+
+        .card {
+            width: 190px;
+            height: 254px;
+            border-radius: 20px;
+            background: #f5f5f5;
+            position: relative;
+            padding: 1.8rem;
+            border: 2px solid #c3c6ce;
+            transition: 0.5s ease-out;
+            overflow: visible;
+            padding-top: 200px;
+        }
+
+        .card-details {
+            color: black;
+            height: 100%;
+            gap: .5em;
+            display: grid;
+            place-content: center;
+        }
+
+        .card-button {
+            transform: translate(-50%, 125%);
+            width: 60%;
+            border-radius: 1rem;
+            border: none;
+            background-color: #008bf8;
+            color: #fff;
+            font-size: 1rem;
+            padding: .5rem 1rem;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            opacity: 0;
+            transition: 0.3s ease-out;
+        }
+
+        .text-body {
+            color: rgb(134, 134, 134);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Text */
+        .text-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Hover */
+        .card:hover {
+            border-color: #008bf8;
+            box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+        }
+
+        .card:hover .card-button {
+            transform: translate(-50%, 50%);
+            opacity: 1;
+        }
+
+        .container {
+            position: relative;
+            font-family: sans-serif;
+        }
+
+        .container::before, .container::after {
+            content: "";
+            background-color: #fab5704c;
+            position: absolute;
+        }
+
+        .container::before {
+            border-radius: 50%;
+            width: 6rem;
+            height: 6rem;
+            top: 30%;
+            right: 7%;
+        }
+
+        .container::after {
+            content: "";
+            position: absolute;
+            height: 3rem;
+            top: 8%;
+            right: 5%;
+            border: 1px solid;
+        }
+
+        .container .box {
+            width: 11.875em;
+            height: 15.875em;
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.074);
+            border: 1px solid rgba(255, 255, 255, 0.222);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border-radius: .7rem;
+            transition: all ease .3s;
+        }
+
+        .container .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .container .box .title {
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: .1em
+        }
+
+        .container .box div strong {
+            display: block;
+            margin-bottom: .5rem;
+        }
+
+        .container .box div p {
+            margin: 0;
+            font-size: .9em;
+            font-weight: 300;
+            letter-spacing: .1em;
+        }
+
+        .container .box div span {
+            font-size: .7rem;
+            font-weight: 300;
+        }
+
+        .container .box div span:nth-child(3) {
+            font-weight: 500;
+            margin-right: .2rem;
+        }
+
+        .container .box:hover {
+            box-shadow: 0px 0px 20px 1px #ffbb763f;
+            border: 1px solid rgba(255, 255, 255, 0.454);
+        }
+        
+        
 
         .fade-in {
             opacity: 1;
@@ -43,23 +199,18 @@
         }
         
         .Headline {
-            color: white;
-            font-family: system-ui; 
+            color: #B5EBFA;
+            font-family: "Lato", Sans-serif;
             font-size: 65px;
             margin-bottom: 20px;
             line-height: 1.2;
             padding-top: 20px;
         }
         
-        .gradient {
-            background-image: linear-gradient(to right, #00ddff, #0042f9);
-            background-clip: text;
-            -webkit-background-clip: text; /* Chrome, Safari 3 */
-            -webkit-text-fill-color: transparent;
-          }
+        
         
         .animated-gradient {
-            background-image: linear-gradient(to right, #00ddff, #0042f9);
+            background-image: linear-gradient(to right, #B5EBFA, #b69bfc);
             background-size: 200% auto;
             -webkit-background-clip: text;
             background-clip: text;
@@ -73,14 +224,20 @@
             align-items: center;
             justify-content: center;
             padding: 30px 30px;
-            color: white;
-            font-family: Arial, sans-serif;
+            color: #0042f9;
+            font-family: "Lato", Sans-serif;
+           
             font-size: 20px;
         }
 
         .Brand {
             text-align: center;
             margin-bottom: 20px;
+            font-family: "Lato", Sans-serif;
+            color: #ffffff
+            
+        
+            
         }
 
         .Nav-links {
@@ -101,45 +258,263 @@
             opacity: 0.5;
         }
 
-        .Signup {
-            background-image: linear-gradient(to right, #00ddff, #0042f9);
-            background-color: transparent;
-            border: none;
-            color: white;
-            font-family: system-ui; 
-            font-size: 20px;
-            border-radius: 15px;
-            padding: 15px 30px;
-            text-decoration: none;
-            transition: background-color 0.3s, opacity 0.3s;
-        }
 
-        .LearnMore {
-            background-image: linear-gradient(to right, #00ddff, #0042f9);
-            background-color: transparent;
-            border: none;
-            color: white;
-            font-family: system-ui; 
-            font-size: 20px;
-            border-radius: 15px;
-            padding: 15px 30px;
-            text-decoration: none;
-            transition: background-color 0.3s, opacity 0.3s;
-            
-        }
-
-        .LearnMore:hover {
-            opacity: 0.5;
-            
-        }
-
-        .Signup:hover {
-            opacity: 0.5;
-        }
-
-        .info {
+        .Cardcontainer {
             display: flex;
+            text-align: center;
+            justify-content: center; 
             
+        }
+
+        .card {
+            width: 190px;
+            height: 254px;
+            border-radius: 20px;
+            background: #f5f5f5;
+            padding: 1.8rem;
+            border: 2px solid #c3c6ce;
+            transition: 0.5s ease-out;
+            overflow: visible;
+            margin-right: 20px; /* Add margin to create a gap between the cards */
+            align-items: center;
+        }
+
+        .card-details {
+            color: black;
+            height: 100%;
+            gap: .5em;
+            display: grid;
+            place-content: center;
+        }
+
+        .card-button {
+            transform: translate(-50%, 125%);
+            width: 60%;
+            border-radius: 1rem;
+            border: none;
+            background-color: #008bf8;
+            color: #fff;
+            font-size: 1rem;
+            padding: .5rem 1rem;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            opacity: 0;
+            transition: 0.3s ease-out;
+        }
+
+        .text-body {
+            color: rgb(134, 134, 134);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Text */
+        .text-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Hover */
+        .card:hover {
+            border-color: #008bf8;
+            box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+        }
+
+        .card:hover .card-button {
+            transform: translate(-50%, 50%);
+            opacity: 1;
+        }
+
+        .container {
+            position: relative;
+            font-family: sans-serif;
+        }
+
+        .container::before, .container::after {
+            content: "";
+            background-color: #fab5704c;
+            position: absolute;
+        }
+
+        .container::before {
+            border-radius: 50%;
+            width: 6rem;
+            height: 6rem;
+            top: 30%;
+            right: 7%;
+        }
+
+        .container::after {
+            content: "";
+            position: absolute;
+            height: 3rem;
+            top: 8%;
+            right: 5%;
+            border: 1px solid;
+        }
+
+        .container .box {
+            width: 11.875em;
+            height: 15.875em;
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.074);
+            border: 1px solid rgba(255, 255, 255, 0.222);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border-radius: .7rem;
+            transition: all ease .3s;
+        }
+
+        .container .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .container .box .title {
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: .1em
+        }
+
+        .container .box div strong {
+            display: block;
+            margin-bottom: .5rem;
+        }
+
+        .container .box div p {
+            margin: 0;
+            font-size: .9em;
+            font-weight: 300;
+            letter-spacing: .1em;
+        }
+
+        .container .box div span {
+            font-size: .7rem;
+            font-weight: 300;
+        }
+
+        .container .box div span:nth-child(3) {
+            font-weight: 500;
+            margin-right: .2rem;
+        }
+
+        .container .box:hover {
+            box-shadow: 0px 0px 20px 1px #ffbb763f;
+            border: 1px solid rgba(255, 255, 255, 0.454);
+        }
+
+        
+        
+
+       
+        .Learnmorebutton {
+            position: relative;
+            padding: 12px 32px;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #000;
+            background-color: #fff;
+            border: none;
+            border-radius: 50px;
+            overflow: hidden;
+            z-index: 1;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+          }
+          
+          .Learnmorebutton:hover {
+            transform: scale(1.05);
+            color: #fff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          }
+          
+          .Learnmorebutton:active {
+            transform: scale(0.9);
+            
+          }
+          
+          .Learnmorebutton::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, #007bff, #00bfff);
+            transition: left 0.4s ease-in-out;
+            z-index: -1;
+            border-radius: 50px;
+          }
+          
+          .Learnmorebutton:hover::before {
+            left: 0;
+          }
+          .Learn {
+            text-decoration: none;
+            color:  #00b7ff;
+          }
+          .Learn:hover {
+            color: white;
+          }
+
+          
+          .signup {
+            position: relative;
+            padding: 12px 32px;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #000;
+            background-color: #fff;
+            border: none;
+            border-radius: 50px;
+            overflow: hidden;
+            z-index: 1;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+          }
+          
+          .signup:hover {
+            transform: scale(1.05);
+            color: #fff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          }
+          
+          .signup:active {
+            transform: scale(0.9);
+            
+          }
+          
+          .signup::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, #007bff, #00bfff);
+            transition: left 0.4s ease-in-out;
+            z-index: -1;
+            border-radius: 50px;
+          }
+          
+          .signup:hover::before {
+            left: 0;
+          }
+          .Signup {
+            text-decoration: none;
+            color:  #00b7ff;
+          }
+          .Signup:hover {
+            color: white;
+          }
+
+       
+         .info {
+            display: flex;
             justify-content: space-between;
             height: 65vh;
             padding: 0 30px;
@@ -151,14 +526,14 @@
             padding-right: 50px;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+            align-items: left;
+            justify-content: left;
+            text-align: left;
         }
 
         .Headline {
             color: white;
-            font-family: system-ui; 
+            font-family: "Lato", Sans-serif;
             font-size: 65px;
             margin-bottom: 20px;
             line-height: 1.2;
@@ -166,7 +541,7 @@
         }
 
         .gradient {
-            background-image: linear-gradient(to right, #00ddff, #0042f9);
+            background-image: linear-gradient(to right,  #f4a56d, #eb4b2b);
             background-clip: text;
             -webkit-background-clip: text; /* Chrome, Safari 3 */
             -webkit-text-fill-color: transparent;
@@ -174,13 +549,17 @@
 
         .Explanation {
             color: white;
-            font-family: Arial, sans-serif; 
+            font-family: "Lato", Sans-serif;
             font-size: 25px;
             margin-bottom: 30px;
             padding-right: 25%;
             line-height: 1.4;
-            width: 100%;
+            width: 35%;
             text-align: center; /* Add this line to center the text */
+        }
+        .Learn {
+            text-decoration: none;
+            color:  #00b7ff;
         }
 
         @media (max-width: 600px) {
@@ -213,11 +592,7 @@
                
             }
 
-            .LearnMore {
-                font-size: 20px;
-
-                
-            }
+            
             .LearnMoreContainer {
                 text-align: center;
                 padding-left: 50px;
@@ -253,19 +628,14 @@
                 padding-right: 10px;
             }
 
-            .Brand {
-                margin-top: 0;
-                margin-bottom: 0;
-            }
+            
 
             .Nav-links {
                 flex-direction: row;
                 gap: 30px;
             }
 
-            .Headline {
-                padding-top: 250px;
-            }
+           
 
             .image-container {
                 padding-top: 80px;
@@ -285,6 +655,8 @@
     <script>
         window.addEventListener("DOMContentLoaded", function() {
             document.body.classList.add("fade-in");
+            var gradient = new Gradient()
+            gradient.initGradient('#gradient-canvas');
         });
     </script>
 </head>
@@ -294,14 +666,22 @@
         <h1 class="Brand">FFC Media.</h1>
         <div class="Nav-links">
             
-            <a href="About.html" class="Nav-link">About Us</a>
-            <a href="GetStarted.html" class="Signup">Sign up</a>
+            <a href="aboutus.html" class="Nav-link">About Us</a>
+            <a href="Pricing.html" class="Nav-link">Pricing</a>
+            <a href="Guide.html" class="Nav-link">Guide</a>
+            
+            <a href="Signup.html" class="Signup">
+            <button class="signup">
+                Sign up
+            </button>
+             </a>
+            
         </div>
     </div>
 
     <div class="info">
         <div class="info-content">
-            <h2 class="Headline">
+            <h2 class="Headline" class = "animate__fadeInRight">
                 Social <span class="gradient animated-gradient">Media</span><br>
                 Services
             </h2>
@@ -314,14 +694,20 @@
             </p>
 
             <div class="LearnMoreContainer">
-                <a href="LearnMore.html" class="LearnMore">
-                    Learn More
-                </a>
+                <a href="LearnMore.html" class="Learn">
+                <button class="Learnmorebutton">
+                Learn More
+            </button>
+            </a>
             </div>
+            
         </div>
+
+        
         <div class="image-container">
-            <img src="AgencyWeb-removebg.png" width="857" height="563">
+            
         </div>
     </div>
+    
 </body>
 </html>
