@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Two Boxes with Tailwind CSS</title>
-    <style>
 
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-STBJ4YRRRR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-STBJ4YRRRR');
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Favicon.png">
+    <title>Learn More - FFC Media</title>
+    <style>
         body {
             background-image: url('GuideBackground.png');
             background-size: 150% 1000%;
@@ -14,169 +27,84 @@
             margin: 0;
             padding: 0;
             margin-top: 50px;
+            margin-bottom: 50px;
+            overflow-x: hidden;
         }
-            
-       
-        .Cardcontainer {
+
+        .headline {
+            font-weight: bold;
+        }
+
+        .title {
+            font-size: 45px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+        
+        }
+
+        .info {
+            font-size: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .cards {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            position: relative;
         }
 
         .card {
-            width: 190px;
-            height: 254px;
+            width: 800px;
+            height: 100%px;
             border-radius: 20px;
             background: #f5f5f5;
             position: relative;
             padding: 1.8rem;
-            border: 2px solid #c3c6ce;
+            border: 5px solid #c3c6ce;
             transition: 0.5s ease-out;
             overflow: visible;
-            padding-right: 50px;
-            margin-right: 20px; /* Add margin to create a gap between the cards */
+            
         }
 
         .card-details {
-            color: black;
+            color: green;
             height: 100%;
             gap: .5em;
             display: grid;
             place-content: center;
+            font-family: 'Courier New', Courier, monospace;
         }
 
-        .card-button {
-            transform: translate(-50%, 125%);
-            width: 70%;
-            border: none;
-            background-color: #D65F58;
-            font-size: 1rem;
-            padding: .5rem 1rem;
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            opacity: 0;
-            transition: 0.3s ease-out;
-            text-transform: uppercase;
-            border-radius: 50px;
-            border: 0;
-            box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
-            letter-spacing: 1.5px;
-            color: #fff;
-        }
-        .card-button:hover {
-            letter-spacing: 3px;
-            background-color: #D65F58;
-            color: hsl(0, 0%, 100%);
-            box-shadow: #D65F58 0px 7px 29px 0px;
-        }
+        
 
         .text-body {
             color: rgb(134, 134, 134);
-            font-family: Arial, Helvetica, sans-serif;
         }
 
-        /* Text */
         .text-title {
             font-size: 1.5em;
             font-weight: bold;
-            font-family: Arial, Helvetica, sans-serif;
         }
 
-        /* Hover */
         .card:hover {
-            border-color: #D65F58;
-            transform: scale(1.03);
-            box-shadow: 0 8px 20px 0 #D65F58;
+            border-color: white;
+            transform: scale(1.1);
+            
+            
+           
         }
 
         .card:hover .card-button {
             transform: translate(-50%, 50%);
             opacity: 1;
         }
-
-        .container {
-            position: relative;
-            font-family: sans-serif;
-        }
-
-        .container::before, .container::after {
-            content: "";
-            background-color: #fab5704c;
-            position: absolute;
-        }
-
-        .container::before {
-            border-radius: 50%;
-            width: 6rem;
-            height: 6rem;
-            top: 30%;
-            right: 7%;
-        }
-
-        .container::after {
-            content: "";
-            position: absolute;
-            height: 3rem;
-            top: 8%;
-            right: 5%;
-            border: 1px solid;
-        }
-
-        .container .box {
-            width: 11.875em;
-            height: 15.875em;
-            padding: 1rem;
-            background-color: #D65F58;
-            border-width: 5px;
-            -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
-            border-radius: .7rem;
-            transition: all ease .3s;
-        }
-
-        .container .box {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .container .box .title {
-            font-size: 2rem;
-            font-weight: 500;
-            letter-spacing: .1em;
-            color: #fff;
-        }
-
-        .container .box div strong {
-            display: block;
-            margin-bottom: .5rem;
-            color: #fff;
-        }
-
-        .container .box div p {
-            margin: 0;
-            font-size: .9em;
-            font-weight: 300;
-            letter-spacing: .1em;
-            color: #fff;
-        }
-
-        .container .box div span {
-            font-size: .7rem;
-            font-weight: 300;
-            color: #fff;
-        }
-
-        .container .box div span:nth-child(3) {
-            font-weight: 500;
-            margin-right: .2rem;
-        }
-
-        .container .box:hover {
-            box-shadow: 0px 0px 20px 1px white;
-            border: 1px solid white;
-        }
-
         .backbutton {
             padding: 17px 40px;
             border-radius: 50px;
@@ -189,69 +117,80 @@
             transition: all .5s ease;
             text-decoration: none;
             width: 300px;
-            color: #D65F58;
-            font-weight: bold;
-        }
-
-        .backbutton:hover {
+           
+           
+           }
+           
+          .backbutton:hover {
             letter-spacing: 3px;
-            background-color: #D65F58;
-            color: hsl(0, 0%, 100%);
-            box-shadow: #D65F58 0px 7px 29px 0px;
-        }
-
-        .backbutton:active {
+            color: black(0, 0%, 100%);
+            box-shadow: white  0px 7px 29px 0px;
+           }
+           
+           .backbutton:active {
             letter-spacing: 3px;
             color: hsl(0, 0%, 100%);
             box-shadow: #cd7773 0px 0px 0px 0px;
             transform: translateY(10px);
             transition: 100ms;
-        }
-
-        .backbuttoncontainer {
+           }
+           .backbuttoncontainer {
             display: flex;
             justify-content: center;
             padding-top: 30px;
-        }
-        .thebutton {
+           }
+           .thebutton {
             text-decoration: none;
             color: black;
-        }
+           }
     </style>
 </head>
-<body>
- 
-   
-        <div class="Cardcontainer">
-            <div class="card">
-                <div class="card-details">
-                    <p class="text-title">Google Ads</p>
-                    <p class="text-body">Here are the details of the card</p>
-                </div>
-            <a href="index.html">
-                <button class="card-button">
-                    More info
-                </button>
-            </a>
-            
-        </div>
 
-            <div class="card">
-                <div class="card-details">
-                    <p class="text-title">Google Ads</p>
-                    <p class="text-body">Here are the details of the card</p>
-                </div>
-                <button class="card-button">More info</button>
-            </div>
-        </div>
-    <div class="backbuttoncontainer">
-        <a href="index.html" class="thebutton">
-            <button class="backbutton">
-                Back
-            </button>
-        </a>
+<body>
+
+    <div class="title">
+        What services do we provide?
     </div>
 
-   
+    <div class="cards" onmousemove="updateActiveCard(event)">
+        <div class="card red">
+            <p class="headline">Paid Advertising Campaigns</p>
+            <p class="info">With FFC Media we will create 4 high-quality campaigns per month on any social media platforms to connect with potential customers and increase sales. Our experienced employees will create and handle your advertising campaigns, ensuring precise audience targeting. Get fast results and maximize your return on investment and optimize your ad spend for maximum value. You will also receive regular reports on campaign performance.</p>
+        </div>
+        <div class="card blue">
+            <p class="headline">Google Analytics</p>
+            <p class="info"> We will provide you with weekly reports on your advertisement campaigns and website performance. Our goal is to ensure that you stay informed and updated on the progress of your advertisement campaigns and website's performance. With these weekly reports, you'll have valuable insights into key metrics and data that will help you make informed decisions and optimize your marketing strategies. We will handle every aspect of Google Analytics for your business so you can gain a deeper understanding of your website traffic, user behavior, and conversion rates and make data-driven decisions to optimize your website and marketing strategies to increase your return on investment.</p>
+        </div>
+        <div class="card green">
+            <p class="headline">Social media account management</p>
+            <p class="info">With our Social Media Account Management service at FFC Media, we are dedicated to elevating your online presence and driving tangible results for your business. By entrusting us with the responsibility of managing your social media accounts, you'll free up valuable time and resources, enabling you to concentrate on other crucial aspects of your brand. Prepare to witness a surge in brand visibility, higher follower engagement, and strengthened brand loyalty as we implement effective strategies to captivate your target audience.
+
+                Through regular monitoring and in-depth analytics, we will identify growth opportunities and fine-tune your social media performance to ensure maximum impact. Our team is committed to providing timely responses to customer inquiries and feedback, nurturing a positive online reputation for your brand.
+                
+                The result? A measurable boost in leads, conversions, and revenue that will propel your business towards long-term success. Let FFc Media handle your Social Media Account Management, and watch as your online presence soars to new heights.</p>
+        </div>
+        <div class="card yellow">
+            <p class="headline">Google Ads</p>
+            <p class="info">our commitment to your success shines through our Google Ads services. You can count on us to deliver weekly reports that offer a comprehensive view of your advertisement campaigns' performance. Our goal is to keep you informed and updated on the progress of your Google Ads, ensuring transparency every step of the way.
+
+With these detailed weekly reports, you'll gain valuable insights into key metrics and data, providing you with a clear understanding of how your ads are performing. From click-through rates to conversion rates and more, we'll analyze the data, allowing you to make informed decisions to optimize your Google Ads and maximize their effectiveness.
+
+We handle every aspect of Google Ads for your business, from campaign setup and ad copy creation to keyword research and bid management. Our team of experts is well-versed in crafting compelling ad copies that resonate with your target audience, ensuring that your ads reach the right people at the right time.
+
+</p>
+        </div>
+       
+    </div>
+<div class="backbuttoncontainer">
+    <a class="thebutton" href="index.html">
+    <button class="backbutton">
+        Back
+    </button>
+</a>
+</div>
+
+
+    
 </body>
+
 </html>
