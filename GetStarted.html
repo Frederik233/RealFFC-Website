@@ -139,9 +139,14 @@
             transition: all .5s ease;
             text-decoration: none;
             width: 300px;
+        }
            
            
-           }
+           
+           .mainform {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
            
           .backbutton:hover {
             letter-spacing: 3px;
@@ -160,11 +165,42 @@
             display: flex;
             justify-content: center;
             padding-top: 30px;
+            margin-bottom: 30px;
            }
            .thebutton {
             text-decoration: none;
             color: black;
            }
+           
+           @media (max-width: 600px) {
+            .form-container {
+                flex-direction: column; 
+               
+            }
+            .mainform {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+            img {
+                display: none;
+            }
+            
+            .reach-us-card-container {
+              height: 200px;
+                
+                
+            }
+
+            }
+           
+           
+           
+            
+      
+            
+          
+            
+            
            
     </style>
 </head>
@@ -176,7 +212,7 @@
     </div>
 
 <div class = form-container>
-
+<div class = mainform>
 <script src="https://cdn02.jotfor.ms/static/prototype.forms.js?3.3.43429" type="text/javascript"></script>
 <script src="https://cdn03.jotfor.ms/static/jotform.forms.js?3.3.43429" type="text/javascript"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/punycode/1.4.1/punycode.js"></script>
@@ -266,11 +302,13 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,{"name":"7","q
 <script type="text/javascript">JotForm.forwardToEu=true;</script>
 <script src="https://cdn.jotfor.ms//js/vendor/smoothscroll.min.js?v=3.3.43429"></script>
 <script src="https://cdn.jotfor.ms//js/errorNavigation.js?v=3.3.43429"></script>
+</div>
 <div class = reach-us-card-container>
-<div class="reach-us-card">
+  <div class="reach-us-card">
     <h3>Reach Us</h3>
     <p>Email: info@ffcmedia.com</p>
     <p>Phone: +45 71 42 10 63</p>
+    <img src="FFCMediaLogo.png"width= 60% height= 60%>
     
   </div>
 </div>
