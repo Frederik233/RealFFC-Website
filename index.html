@@ -25,10 +25,10 @@
     
     <style>
         body {
-            background-image: url(Backgroundimg.png );
+            background-image: url(Whitebackground.png);
             font-family: "Lato", Sans-serif;
-            overflow-y: hidden;
-            overflow-y: hidden;
+           
+            
             opacity: 0;
             transition: opacity 3s ease-in;
             background-size: 100% 130%;
@@ -567,6 +567,7 @@
                 margin-top: 20px;
                 margin-bottom: 10px;
                 font-size: 35px;
+                text-align: center; 
             }
 
             .Nav-links {
@@ -575,6 +576,7 @@
                 gap: 20px;
                 font-size: 14px;
                 width: 100%;
+                text-align: center; 
             }
 
             .Headline {
@@ -585,10 +587,12 @@
 
             .Signup {
                 padding: 10px 25px;
+
             }
 
             .LearnMoreContainer {
                 text-align: center;
+                padding-bottom: 50px;
                
             }
 
@@ -596,14 +600,11 @@
             .LearnMoreContainer {
                 text-align: center;
                 padding-left: 50px;
+            
 
             }
 
-            .Explanation {
-                font-size: 20px;
-                text-align: center;
-                padding-left: 150px;
-            }
+        
 
             .Signup {
                 font-size: 16px;
@@ -612,22 +613,42 @@
             .image-container {
                 display: none;
             }
+            .Headline {
+                color: #007bff;
+            }
+            .Brand {
+                color: #007bff;
+            }
+            .Nav-link {
+                color: #007bff;
+            }
+            .Nav-link {
+                color: #007bff;
+            }
+            .Explanation{
+                color: #007bff;
+                width: 100%;
+                padding-left: 25px;
+            }
+            .gradient {
+                background-image: linear-gradient(to right,  #007bff, #eb4b2b);
+                background-clip: text;
+                -webkit-background-clip: text; /* Chrome, Safari 3 */
+                -webkit-text-fill-color: transparent;
+              }
 
+            
             
         }
 
-        @media (min-width: 601px) {
+        @media (min-width: 600px) {
             .Header {
                 flex-direction: row;
                 align-items: left;
                 justify-content: space-between;
             }
 
-            .Explanation {
-                text-align: left;
-                padding-right: 10px;
-            }
-
+            
             
 
             .Nav-links {
@@ -645,10 +666,14 @@
                 padding-bottom: 200px;
                 
             }
-            .body {
-                overflow-y: hidden;
-                overflow-y: hidden;
+            body {
+                
+                
+                background-image: url(Backgroundimg.png);
+                
             }
+            
+            
         }
     </style>
 
@@ -670,9 +695,9 @@
             <a href="Pricing.html" class="Nav-link">Pricing</a>
             <a href="Guide.html" class="Nav-link">Guide</a>
             
-            <a href="GetStarted.html" class="Contact us">
+            <a href="Signup.html" class="Signup">
             <button class="signup">
-                Sign up
+                Contact us
             </button>
              </a>
             
